@@ -11,7 +11,7 @@ Clone the repository and run:
 
 ```sh
 pip install .
-python run src/main.py
+python src/main.py
 ```
 
 If you want to have debug info printed on the webcam output and the terminal
