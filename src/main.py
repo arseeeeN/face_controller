@@ -44,6 +44,7 @@ def process_frame(result: vision.FaceLandmarkerResult, output_image: mp.Image, t
         landmark_processor.process_body_xyz_angles(
             result.facial_transformation_matrixes[0])
     mapper.trigger_actions()
+    landmark_processor.history.clear()
 
 
 base_options = python.BaseOptions(

@@ -115,5 +115,5 @@ class ActionParameterMapper:
             self.parameters[name].value = value
 
     def trigger_actions(self):
-        for action, transformer in self.map.items():
+        for action, transformer in dict(self.map).items():
             action.trigger(transformer.get_action_value())
