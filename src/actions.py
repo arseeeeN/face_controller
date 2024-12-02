@@ -1,3 +1,4 @@
+import sys
 from enum import Enum
 import pynput.mouse
 import pynput.keyboard
@@ -5,6 +6,12 @@ from pynput.keyboard import Key
 
 mouse = pynput.mouse.Controller()
 keyboard = pynput.keyboard.Controller()
+
+mouse_sensitivity = 10
+if "-s" in sys.argv:
+    i = sys.argv.index("-s")
+    if len(sys.argv) > i + 1 and isinstance(sys.argv[i + 1], int):
+        mouse_sensitivity = sys.argv[i + 1]
 
 
 class Action(Enum):
