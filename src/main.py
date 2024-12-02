@@ -107,11 +107,12 @@ class Worker(QThread):
                         print_action_state(annotated_image)
                     self.image_queue.put(annotated_image)
                     annotated_image = None
-                    if (current_timestamp - self.last_reset) > 1:
-                        print(self.frames_this_second)
-                        self.frames_this_second = 0
-                        self.last_reset = current_timestamp
-                    self.frames_this_second += 1
+                    if "--debug" in sys.argv or "-d" in sys.argv:
+                        if (current_timestamp - self.last_reset) > 1:
+                            print(self.frames_this_second)
+                            self.frames_this_second = 0
+                            self.last_reset = current_timestamp
+                        self.frames_this_second += 1
 
 
 image_queue = Queue()
