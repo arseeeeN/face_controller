@@ -10,8 +10,10 @@ keyboard = pynput.keyboard.Controller()
 mouse_sensitivity = 10
 if "-s" in sys.argv:
     i = sys.argv.index("-s")
-    if len(sys.argv) > i + 1 and isinstance(sys.argv[i + 1], int):
-        mouse_sensitivity = sys.argv[i + 1]
+    if len(sys.argv) > i + 1:
+        s = sys.argv[i + 1]
+        if s.isdecimal():
+            mouse_sensitivity = int(s)
 
 
 class Action(Enum):
