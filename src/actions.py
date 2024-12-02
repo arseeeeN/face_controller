@@ -3,6 +3,7 @@ from enum import Enum
 import pynput.mouse
 import pynput.keyboard
 from pynput.keyboard import Key
+from pynput.mouse import Button
 
 mouse = pynput.mouse.Controller()
 keyboard = pynput.keyboard.Controller()
@@ -25,6 +26,8 @@ class Action(Enum):
     ARROW_DOWN = 11
     ARROW_LEFT = 12
     ARROW_RIGHT = 13
+    MOUSE_BUTTON_LEFT = 20
+    MOUSE_BUTTON_RIGHT = 21
     PRESS_Q = 100
     PRESS_W = 101
     PRESS_E = 102
@@ -48,6 +51,12 @@ class Action(Enum):
                 mouse.move(-value * mouse_sensitivity, 0)
             case Action.MOUSE_RIGHT:
                 mouse.move(value * mouse_sensitivity, 0)
+            case Action.MOUSE_BUTTON_LEFT:
+                if value > 0:
+                    mouse.click(Button.left, 1)
+            case Action.MOUSE_BUTTON_RIGHT:
+                if value > 0:
+                    mouse.click(Button.right, 1)
             case Action.ARROW_UP:
                 if value > 0:
                     keyboard.tap(Key.up)
