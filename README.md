@@ -14,5 +14,8 @@ pip install .
 python run src/main.py
 ```
 
+If you want to have debug info printed on the webcam output use
+the `--debug` or `-d` flag
+
 This project was originally written using python version 3.10.14 but should
 work on newer python versions as well.

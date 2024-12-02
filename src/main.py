@@ -103,7 +103,8 @@ class Worker(QThread):
                     self.frame = frame
                 if annotated_image is not None:
                     current_timestamp = time.perf_counter()
-                    print_action_state(annotated_image)
+                    if "--debug" in sys.argv or "-d" in sys.argv:
+                        print_action_state(annotated_image)
                     self.image_queue.put(annotated_image)
                     annotated_image = None
                     if (current_timestamp - self.last_reset) > 1:
