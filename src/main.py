@@ -4,7 +4,6 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import QThread
-# from sklearn.cluster import KMeans
 import time
 import sys
 from queue import Queue
