@@ -1,0 +1,6 @@
+pyproject.toml
+src/face_controller.egg-info/PKG-INFO
+src/face_controller.egg-info/SOURCES.txt
+src/face_controller.egg-info/dependency_links.txt
+src/face_controller.egg-info/requires.txt
+src/face_controller.egg-info/top_level.txt

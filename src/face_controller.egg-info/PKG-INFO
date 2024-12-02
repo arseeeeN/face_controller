@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: face_controller
+Version: 0.1.0
+Summary: Use your face to control games and programs
+Requires-Dist: PyQt6
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: mediapipe
+Requires-Dist: pynput
