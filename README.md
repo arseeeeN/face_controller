@@ -17,5 +17,7 @@ python run src/main.py
 If you want to have debug info printed on the webcam output and the terminal
 use the `--debug` or `-d` flag.
 
+You can change the mouse sensitivity using the `-s` flag. (e.g. `-s 20`)
+
 This project was originally written using python version 3.10.14 but should
 work on newer python versions as well.

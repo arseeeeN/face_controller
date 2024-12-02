@@ -39,13 +39,13 @@ class Action(Enum):
         value = abs(value)
         match self:
             case Action.MOUSE_UP:
-                mouse.move(0, -value)
+                mouse.move(0, -value * mouse_sensitivity)
             case Action.MOUSE_DOWN:
-                mouse.move(0, value)
+                mouse.move(0, value * mouse_sensitivity)
             case Action.MOUSE_LEFT:
-                mouse.move(-value, 0)
+                mouse.move(-value * mouse_sensitivity, 0)
             case Action.MOUSE_RIGHT:
-                mouse.move(value, 0)
+                mouse.move(value * mouse_sensitivity, 0)
             case Action.ARROW_UP:
                 if value > 0:
                     keyboard.tap(Key.up)
