@@ -32,9 +32,9 @@ class Action(Enum):
         value = abs(value)
         match self:
             case Action.MOUSE_UP:
-                mouse.move(0, value)
-            case Action.MOUSE_DOWN:
                 mouse.move(0, -value)
+            case Action.MOUSE_DOWN:
+                mouse.move(0, value)
             case Action.MOUSE_LEFT:
                 mouse.move(-value, 0)
             case Action.MOUSE_RIGHT:
